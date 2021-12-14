@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4EA10DB2D2D1D3CFD1F3FBF /* Pods_BrewApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1170F537C4A2DA33EC577C1B /* Pods_BrewApps.framework */; };
 		E6E321A3276852AE00CCF9C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E321A2276852AE00CCF9C8 /* AppDelegate.swift */; };
 		E6E321A5276852AE00CCF9C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E321A4276852AE00CCF9C8 /* SceneDelegate.swift */; };
 		E6E321A7276852AE00CCF9C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E321A6276852AE00CCF9C8 /* ViewController.swift */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1170F537C4A2DA33EC577C1B /* Pods_BrewApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2793D4DA419C403971692A7B /* Pods-BrewApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewApps.release.xcconfig"; path = "Target Support Files/Pods-BrewApps/Pods-BrewApps.release.xcconfig"; sourceTree = "<group>"; };
+		98E2F1917D21F9CC280C468B /* Pods-BrewApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewApps.debug.xcconfig"; path = "Target Support Files/Pods-BrewApps/Pods-BrewApps.debug.xcconfig"; sourceTree = "<group>"; };
 		E6E3219F276852AE00CCF9C8 /* BrewApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E321A2276852AE00CCF9C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E321A4276852AE00CCF9C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EA10DB2D2D1D3CFD1F3FBF /* Pods_BrewApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80A1AB9CADE2DA30084E855A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1170F537C4A2DA33EC577C1B /* Pods_BrewApps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB430EC4A0CC0EF58658345B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98E2F1917D21F9CC280C468B /* Pods-BrewApps.debug.xcconfig */,
+				2793D4DA419C403971692A7B /* Pods-BrewApps.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6E32196276852AD00CCF9C8 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,8 @@
 				E6E321B8276852B000CCF9C8 /* BrewAppsTests */,
 				E6E321C2276852B100CCF9C8 /* BrewAppsUITests */,
 				E6E321A0276852AE00CCF9C8 /* Products */,
+				AB430EC4A0CC0EF58658345B /* Pods */,
+				80A1AB9CADE2DA30084E855A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E321C9276852B100CCF9C8 /* Build configuration list for PBXNativeTarget "BrewApps" */;
 			buildPhases = (
+				AEAF4562C5633147AA9260D2 /* [CP] Check Pods Manifest.lock */,
 				E6E3219B276852AE00CCF9C8 /* Sources */,
 				E6E3219C276852AE00CCF9C8 /* Frameworks */,
 				E6E3219D276852AE00CCF9C8 /* Resources */,
+				9279724B5F59EF59FD1E38D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9279724B5F59EF59FD1E38D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrewApps/Pods-BrewApps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrewApps/Pods-BrewApps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrewApps/Pods-BrewApps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEAF4562C5633147AA9260D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrewApps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E6E3219B276852AE00CCF9C8 /* Sources */ = {
@@ -434,6 +503,7 @@
 		};
 		E6E321CA276852B100CCF9C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E2F1917D21F9CC280C468B /* Pods-BrewApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +531,7 @@
 		};
 		E6E321CB276852B100CCF9C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2793D4DA419C403971692A7B /* Pods-BrewApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
