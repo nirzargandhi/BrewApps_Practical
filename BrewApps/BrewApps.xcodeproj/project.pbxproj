@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4EA10DB2D2D1D3CFD1F3FBF /* Pods_BrewApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1170F537C4A2DA33EC577C1B /* Pods_BrewApps.framework */; };
+		E605D3B727688BAC00CA729B /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E605D3B627688BAC00CA729B /* MovieDetailsVC.swift */; };
 		E6E321A3276852AE00CCF9C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E321A2276852AE00CCF9C8 /* AppDelegate.swift */; };
 		E6E321AA276852AE00CCF9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6E321A8276852AE00CCF9C8 /* Main.storyboard */; };
 		E6E321AC276852B000CCF9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6E321AB276852B000CCF9C8 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		1170F537C4A2DA33EC577C1B /* Pods_BrewApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrewApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2793D4DA419C403971692A7B /* Pods-BrewApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewApps.release.xcconfig"; path = "Target Support Files/Pods-BrewApps/Pods-BrewApps.release.xcconfig"; sourceTree = "<group>"; };
 		98E2F1917D21F9CC280C468B /* Pods-BrewApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrewApps.debug.xcconfig"; path = "Target Support Files/Pods-BrewApps/Pods-BrewApps.debug.xcconfig"; sourceTree = "<group>"; };
+		E605D3B627688BAC00CA729B /* MovieDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
 		E6E3219F276852AE00CCF9C8 /* BrewApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E321A2276852AE00CCF9C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6E321A9276852AE00CCF9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +185,14 @@
 				2793D4DA419C403971692A7B /* Pods-BrewApps.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E605D3B527688B8E00CA729B /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+				E605D3B627688BAC00CA729B /* MovieDetailsVC.swift */,
+			);
+			path = "Movie Details";
 			sourceTree = "<group>";
 		};
 		E6E32196276852AD00CCF9C8 = {
@@ -396,6 +406,7 @@
 		E6E3225727685A1700CCF9C8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E605D3B527688B8E00CA729B /* Movie Details */,
 				E6E3225827685A1E00CCF9C8 /* Movies List */,
 			);
 			path = Modules;
@@ -632,6 +643,7 @@
 				E6E3222C2768572900CCF9C8 /* Extension.swift in Sources */,
 				E6E322272768572900CCF9C8 /* ColorChange.swift in Sources */,
 				E6E322252768572800CCF9C8 /* ImageVideoPickerExtension.swift in Sources */,
+				E605D3B727688BAC00CA729B /* MovieDetailsVC.swift in Sources */,
 				E6E3223F2768572900CCF9C8 /* UISideMenuNavigationController.swift in Sources */,
 				E6E3221E2768572800CCF9C8 /* ApiCall.swift in Sources */,
 				E6E322262768572900CCF9C8 /* FontChangesExtension.swift in Sources */,

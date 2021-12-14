@@ -1,6 +1,6 @@
 //
 //  Constants.swift
- 
+
 //MARK: - Colors
 extension UIColor {
     
@@ -31,12 +31,14 @@ enum AllStoryBoard {
 enum ViewControllerName {
     
     static let kMoviesListVC = "MoviesListVC"
+    static let kMovieDetailsVC = "MovieDetailsVC"
 }
 
 //MARK: - Cell Identifiers
 enum CellIdentifiers {
     
-    static let kCellMoviesList = "CellMoviesList"
+    static let kCellPopularMovies = "CellPopularMovies"
+    static let kCellUnPopularMovies = "CellUnPopularMovies"
 }
 
 //MARK: - Message's
@@ -113,15 +115,20 @@ enum AlertMessage {
 //MARK: - Web Service URLs
 enum WebServiceURL {
     
-    static let mainURL = "https://api.gatherinvesting.com/v1/"
+    static let mainURL = "https://api.themoviedb.org/3/"
     
-    static let productsURL = mainURL + "products"
+    static let moviesListURL = mainURL + "movie/now_playing?"
+    
+    //Load Backdrop & Poster Image
+    static let loadBackDropURL = "https://image.tmdb.org/t/p/original"
+    static let loadPosterURL = "https://image.tmdb.org/t/p/w342"
 }
 
 //MARK: - Web Service Parameters
 enum WebServiceParameter {
     
-    static let pFirstname = "firstname"
+    static let pAPIKey = "api_key"
+    static let pPage = "page"
 }
 
 //MARK: - UserDefault
@@ -163,4 +170,10 @@ enum DateAndTimeFormatString {
     static let strDateFormate_dd = "dd"
     static let strDateFormate_MM = "MM"
     static let strDateFormate_yyyy = "yyyy"
+}
+
+//MARK: - Movie List API Key
+enum MovieListAPIKey {
+    
+    static let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 }

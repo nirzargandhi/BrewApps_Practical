@@ -83,7 +83,7 @@ extension UIViewController {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
             
-            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.appWhite(), .font : (UIFont(name: "LibreBaskerville-Italic" , size: 28) ?? UIFont.systemFont(ofSize: 28).withWeight(UIFont.Weight.bold))]
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.appWhite(), .font : (UIFont(name: "LibreBaskerville-Italic" , size: 24.0) ?? UIFont.systemFont(ofSize: 24.0).withWeight(UIFont.Weight.bold))]
             
             navBarAppearance.backgroundColor = .appBlack()
             navBarAppearance.shadowColor = .clear
@@ -105,7 +105,7 @@ extension UIViewController {
         label.backgroundColor = .clear
         label.numberOfLines = 2
         label.lineBreakMode = .byWordWrapping
-        label.font = UIFont(name: "OpenSans-Bold", size: 28.0) ?? UIFont.systemFont(ofSize: 22).withWeight(UIFont.Weight.bold)
+        label.font = UIFont(name: "OpenSans-Bold", size: 24.0) ?? UIFont.systemFont(ofSize: 24.0).withWeight(UIFont.Weight.bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.textColor = .appWhite()
@@ -436,5 +436,42 @@ extension Encodable {
         encoder.outputFormatting = .prettyPrinted
         encoder.dateEncodingStrategy = .iso8601
         return try encoder.encode(self)
+    }
+}
+
+let imageCache = NSCache<NSString, UIImage>()
+extension UIImageView {
+    func loadImageUsingCache(withUrl urlString : String) {
+        let url = URL(string: urlString)
+        if url == nil {return}
+        self.image = nil
+        
+        // check cached image
+        if let cachedImage = imageCache.object(forKey: urlString as NSString)  {
+            self.image = cachedImage
+            return
+        }
+        
+        let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView.init(style: .gray)
+        addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        activityIndicator.center = self.center
+        
+        // if not, download image from url
+        URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                if let image = UIImage(data: data!) {
+                    imageCache.setObject(image, forKey: urlString as NSString)
+                    self.image = image
+                    activityIndicator.removeFromSuperview()
+                }
+            }
+            
+        }).resume()
     }
 }
