@@ -148,6 +148,8 @@ extension MoviesListVC : UICollectionViewDelegate, UICollectionViewDataSource, U
             
             cell.imgvMovies.sd_setImage(with: URL(string: "\(WebServiceURL.loadBackDropURL)\(isSearch ? arrSearchMoviesList[indexPath.row].backdrop_path ?? "" : arrMoviesList[indexPath.row].backdrop_path ?? "")"), completed: nil)
             
+            cell.btnDelete.isHidden = isSearch ? true : false
+            
             cell.btnDelete.tag = indexPath.row
             cell.btnDelete.addTarget(self, action: #selector(btnDeleteAction(_:)) , for: .touchUpInside)
             
@@ -160,6 +162,8 @@ extension MoviesListVC : UICollectionViewDelegate, UICollectionViewDataSource, U
             cell.lblTitle.text = isSearch ? arrSearchMoviesList[indexPath.row].title ?? "" : arrMoviesList[indexPath.row].title ?? ""
             
             cell.lblOverview.text = isSearch ? arrSearchMoviesList[indexPath.row].overview ?? "" : arrMoviesList[indexPath.row].overview ?? ""
+            
+            cell.btnDelete.isHidden = isSearch ? true : false
             
             cell.btnDelete.tag = indexPath.row
             cell.btnDelete.addTarget(self, action: #selector(btnDeleteAction(_:)) , for: .touchUpInside)
